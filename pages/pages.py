@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-
 from locators import MainPageLocators
 from locators import LoginPageLocators
 from locators import RegisterPageLocator
@@ -36,8 +33,8 @@ class MainPage(BasePage):
 
 class ForgetPassword(BasePage):
     def _verify_page(self):
-        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(ForgetPasswordLocators.RESET_EMAIL_BUTTON))
-        WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(ForgetPasswordLocators.RESET_EMAIL_BUTTON))
+        WebDriverWait(self.driver, 15).until(EC.presence_of_element_located(ForgetPasswordLocators.RESET_EMAIL_BUTTON))
+        WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable(ForgetPasswordLocators.RESET_EMAIL_BUTTON))
 
     def click_reset_button(self):
         el = self.driver.find_element(*ForgetPasswordLocators.RESET_EMAIL_BUTTON)
@@ -154,6 +151,3 @@ class RegisterPage(BasePage):
         error = self.driver.find_element(*RegisterPageLocator.ERROR_NOTICE_EMAIL)
         if error.is_displayed():
             return error.get_attribute('innerText')
-
-
-

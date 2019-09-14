@@ -1,4 +1,3 @@
-# _*_ coding: utf-8 _*_
 import unittest
 from selenium import webdriver
 import test_data

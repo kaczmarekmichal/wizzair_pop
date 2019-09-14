@@ -5,4 +5,4 @@ mobile_phone = "512524524"
 email ='adam.wp.pl'
 password = "DupaMamuta90"
 country="Polska"
-email_reset_password = 'aadam@wp.pl'
+email_reset_password = 'jan.kowalski@wp.pl'
